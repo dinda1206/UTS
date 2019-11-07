@@ -1,0 +1,46 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int uts,uas,tugas,nilai_akhir,i;
+    char nama[25],indeks_nilai;
+ 
+    for (i=1;i<=20;i++) {
+    cout << "mahasiswa ke " << i << endl;
+    cout << "masukan nama : ";
+    cin >> nama;
+    cout << "masukan nilai uts : ";
+    cin >> uts;
+    cout << "masukan nilai uas : ";
+    cin >> uas;
+    cout << "masukan nilai tugas : ";
+    cin >> tugas;
+    
+    
+    cout << "\n===================================" << endl;
+    cout << "====DATA NILAI MATA KULIAH====" << endl;
+    cout << "===================================" << endl;
+    cout << "\nNama Mahasiswa : " << nama << endl;
+    
+    nilai_akhir=((30*uts)/100)+((40*uas)/100)+((30*tugas)/100);
+    cout << "Nilai akhir : " << nilai_akhir << endl;
+    
+    if (nilai_akhir <70) {
+        cout << "indeks nilai : D " << endl;
+        cout << endl;
+    }
+    else if (nilai_akhir <80 and nilai_akhir >=70) {
+        cout << "indeks nilai : C " << endl;
+        cout << endl;
+    }
+    else if (nilai_akhir <90 and nilai_akhir >=80) {
+        cout << "indeks nilai : B " << endl;
+        cout << endl;
+    }
+    else if (nilai_akhir > 90) {
+        cout << "indeks nilai : A " << endl;
+        cout << endl;
+    }
+    }
+}
