@@ -1,22 +1,24 @@
 #include <iostream>
-
 using namespace std;
 
 int main() {
+    int n;
+    float rumus,jumlah,total;
     
-    int n,i;
-    cout << "Masukkan jumlah n : ";
+    cout << "masukan n : ";
     cin >> n;
-    for(i=0; i<=n; i++){
-        if(i==0){
-            i=i+2;
-            cout<<"F(X) = 1 ";
-        }
-        if(i%2==0){
-            cout << "-1/" << i << " ";
-        }else{
-            cout << "+1/" << i << " ";
-        }
-    }
     
+    jumlah=0;
+    total=0;
+    rumus=-1;
+    for(int x=1; x<=n; x++){
+    rumus=(rumus*(-1));
+    total=rumus/x;
+    jumlah= jumlah + total;
+    if(x==1)
+    cout<<"("<<total<<")";
+    if(x>1)
+    cout<<"+("<<total<<")";
+    }
+    cout << "Jumlahnya = " << jumlah;
 }
